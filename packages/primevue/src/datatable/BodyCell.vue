@@ -261,7 +261,11 @@ export default {
     },
     methods: {
         columnProp(prop) {
-            return getVNodeProp(this.column, prop);
+            let vNodeProp = getVNodeProp(this.column, prop);
+            if (prop == 'rowEditor' && typeof vNodeProp == 'function') {
+                vNodeProp = vNodeProp(this.rowData);
+            }
+            return vNodeProp;
         },
         getColumnPT(key) {
             const columnMetaData = {

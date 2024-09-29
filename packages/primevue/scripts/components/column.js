@@ -211,7 +211,7 @@ const ColumnProps = [
     },
     {
         name: 'rowEditor',
-        type: 'boolean',
+        type: 'boolean | Function',
         default: 'false',
         description: 'When enabled, column displays row editor controls.'
     },

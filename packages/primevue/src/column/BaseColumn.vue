@@ -151,7 +151,7 @@ export default {
             default: true
         },
         rowEditor: {
-            type: Boolean,
+            type: [Boolean, Function],
             default: false
         },
         frozen: {

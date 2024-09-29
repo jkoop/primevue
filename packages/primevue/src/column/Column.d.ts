@@ -514,7 +514,7 @@ export interface ColumnProps {
      * When enabled, column displays row editor controls.
      * @defaultValue false
      */
-    rowEditor?: boolean | undefined;
+    rowEditor?: boolean | Function | undefined;
     /**
      * Whether the column is fixed in horizontal scrolling.
      * @defaultValue false
